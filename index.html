@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle Financeiro Interativo</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>CONTROLE FINANCEIRO MENSAL</h1>
+
+        <div class="cards">
+            <div class="card blue">
+                <h3>TOTAL PAGO</h3>
+                <p id="totalPago">R$ 0,00</p>
+            </div>
+
+            <div class="card red">
+                <h3>TOTAL A PAGAR</h3>
+                <p id="totalPagar">R$ 0,00</p>
+            </div>
+
+            <div class="card red">
+                <h3>TOTAL VENCIDO</h3>
+                <p id="totalVencido">R$ 0,00</p>
+            </div>
+
+            <div class="card blue">
+                <h3>TOTAL RECEITAS</h3>
+                <p id="totalReceitas">R$ 0,00</p>
+            </div>
+
+            <div class="card green">
+                <h3>SALDO</h3>
+                <p id="saldoMes">R$ 0,00</p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- TABELA DE DESPESAS -->
+        <section class="tabela">
+            <h2>DESPESAS</h2>
+
+            <button onclick="adicionarDespesa()" class="btn-add">+ Adicionar Despesa</button>
+
+            <table id="tabelaDespesas">
+                <thead>
+                    <tr>
+                        <th>Nº</th>
+                        <th>Vencimento</th>
+                        <th>Tipo</th>
+                        <th>Descrição</th>
+                        <th>Valor</th>
+                        <th>Pago?</th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+
+        <!-- TABELA DE RECEITAS -->
+        <section class="tabela">
+            <h2>RECEITAS</h2>
+
+            <button onclick="adicionarReceita()" class="btn-add">+ Adicionar Receita</button>
+
+            <table id="tabelaReceitas">
+                <thead>
+                    <tr>
+                        <th>Nº</th>
+                        <th>Data</th>
+                        <th>Descrição</th>
+                        <th>Valor</th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
